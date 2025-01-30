@@ -19,7 +19,7 @@
         font-style: normal;
       }
     </style>
-    <!-- font awsome cdn -->
+    <!-- font awesome cdn -->
     <script
       src="https://kit.fontawesome.com/5c445f545c.js"
       crossorigin="anonymous"
@@ -32,6 +32,7 @@
           extend: {
             colors: {
               clifford: "#da373d",
+              "color-primary": "rgb(23, 152, 0)",
             },
           },
         },
@@ -45,7 +46,50 @@
     />
   </head>
   <body>
-    <header></header>
+    <header class="md:container mx-auto">
+      <!-- navbar -->
+      <div
+        class="navbar bg-base-100 border border-[rgb(23,152,0)] lg:border-none"
+      >
+        <div class="navbar-start lg:hidden">
+          <img src="c2-assets/Group.png" alt="" />
+        </div>
+        <div class="navbar-end lg:hidden">
+          <button class="btn btn-ghost">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="navbar-start hidden lg:flex">
+          <img src="c2-assets/logo-header.png" alt="Desktop Logo" />
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li><a>Product</a></li>
+            <li><a>Services</a></li>
+            <li><a>Contact us</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end hidden sm:flex space-x-3">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <i class="fa-solid fa-cart-shopping"></i>
+          <a class="btn btn-outline border border-[rgb(23,152,0)]">Login</a>
+          <a class="btn bg-color-primary">Register</a>
+        </div>
+      </div>
+    </header>
     <main></main>
     <footer></footer>
   </body>
