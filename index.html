@@ -45,6 +45,7 @@
       rel="stylesheet"
       type="text/css"
     />
+    <!-- animation -->
   </head>
   <body>
     <header class="bg-gradient-to-r from-[#FFFFFF] to-[#EFEBE3]">
@@ -497,10 +498,18 @@
     </main>
     <main>
       <!-- FAQ -->
-      <section class="lg:my-24 bg-gradient-to-r from-[#FFFFFF] to-[#EFEBE3]">
+      <section
+        class="relative lg:my-24 bg-gradient-to-r from-[#FFFFFF] to-[#EFEBE3]"
+      >
         <h1 class="text-4xl font-bold text-center lg:mb-24">
           Frequently Asked <span class="text-bike-primary"> Questions</span>
         </h1>
+        <!--  Animated Logo -->
+        <div
+          class="absolute -top-10 left-1/2 transform -translate-x-1/2 animate-bounce"
+        >
+          <img src="c2-assets/faq.png" class="w-16 h-16" alt="Logo" />
+        </div>
         <div class="hero">
           <div class="hero-content flex-col lg:flex-row gap-20">
             <img
