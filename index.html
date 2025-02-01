@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap"
       rel="stylesheet"
     />
+
     <style>
       .sora-fonts {
         font-family: "Sora", serif;
@@ -46,9 +47,27 @@
       type="text/css"
     />
     <!-- animation -->
+    <style>
+      @keyframes fadeInOut {
+        0% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+
+      .hero-text-loop {
+        animation: fadeInOut 2s infinite; /* 3s duration, infinite loop */
+      }
+    </style>
   </head>
-  <body>
-    <header class="bg-gradient-to-r from-[#FFFFFF] to-[#EFEBE3]">
+  <body class="sora-fonts w-full">
+    <!-- nav and hero -->
+    <header class="bg-gradient-to-r from-[#FFFFFF] to-[#EFEBE3] w-full">
       <!-- navbar -->
       <nav class="md:container mx-auto">
         <div class="navbar border border-[rgb(23,152,0)] lg:border-none">
@@ -83,39 +102,45 @@
               <li><a>Contact us</a></li>
             </ul>
           </div>
-          <div class="navbar-end hidden sm:flex space-x-3">
+          <div class="navbar-end hidden sm:flex space-x-6">
             <i class="fa-solid fa-magnifying-glass"></i>
             <i class="fa-solid fa-cart-shopping"></i>
-            <a class="btn btn-outline border border-[rgb(23,152,0)]">Login</a>
-            <a class="btn bg-color-primary">Register</a>
+            <a class="btn btn-outline px-8 py-3 border border-[rgb(23,152,0)]"
+              >Login</a
+            >
+            <a class="btn bg-color-primary px-8 py-3">Register</a>
           </div>
         </div>
       </nav>
       <!-- hero section -->
       <div
-        class="flex flex-col justify-center items-center text-center gap-6 md:container mx-auto"
+        class="flex flex-col justify-center items-center text-center gap-6 w-full"
       >
         <h1 class="text-4xl mx-10 mt-10 lg:m-0 lg:text-7xl font-bold">
           <span class="inline">
-            Freshness <span class="text-color-primary">You Can</span><br
+            Freshness <span class="text-color-primary">You Can</span> <br
           /></span>
           <span class="text-color-primary text-center">Count</span> On, Prices
           You’ll Love!
         </h1>
-        <p class="text-xl">
+        <p class="text-xl hero-text-loop">
           Shop your daily essentials at unbeatable prices. From fresh produce to
           pantry staples, we’ve got you covered every day!
         </p>
-        <img class="max-w-full" src="c2-assets/hero-vegetables.png" alt="" />
+        <img
+          class="max-w-full rounded-lg"
+          src="c2-assets/hero-vegetables.png"
+          alt=""
+        />
       </div>
     </header>
     <!-- Services and cards -->
     <main class="md:container mx-auto">
       <!-- Services -->
-      <section>
+      <section class="w-full">
         <header>
           <h1
-            class="text-4xl text-color-primary font-bold mx-10 lg:mx-16 mb-10 mt-16 lg:mt-32"
+            class="text-3xl text-color-primary font-bold mx-6 lg:mx-16 mb-10 mt-16 lg:mt-32"
           >
             Services
           </h1>
@@ -196,18 +221,19 @@
       </section>
     </main>
     <!-- Popular Products -->
-    <main class="bg-gradient-to-r from-[#FFFFFF] to-[#EFEBE3]">
-      <!-- Popular Products -->
-      <section class="container mx-auto">
+    <main
+      class="bg-gradient-to-r from-[#FFFFFF] to-[#EFEBE3] md:container mx-auto"
+    >
+      <section class="w-full p-2 lg:p-10">
         <header class="">
           <h1
-            class="text-4xl text-color-primary font-bold mx-10 lg:mx-16 mb-10 mt-16 lg:mt-32"
+            class="text-3xl text-color-primary font-bold mx-2 mb-10 lg:mb-20 mt-6 lg:mt-14"
           >
             Popular Products
           </h1>
         </header>
         <div
-          class="flex flex-col lg:flex-row mb-32 bg-gradient-to-r from-[#FFFFFF] to-[#EFEBE3]"
+          class="flex flex-col lg:flex-row mb-14 bg-gradient-to-r from-[#FFFFFF] to-[#EFEBE3]"
         >
           <!-- Product Offers -->
           <div
@@ -215,14 +241,14 @@
           >
             <div class="py-10 pl-10 w-2/4">
               <h1 class="text-white text-4xl lg:text-6xl">30% off</h1>
-              <p class="text-gray-700">
+              <p class="text-gray-700 text-xs">
                 Discover a world of treats, toys, and essential handpicks.
               </p>
               <button class="btn bg-white mt-4">BUY NOW</button>
             </div>
             <div class="relative w-5/6 flex items-end">
               <img
-                class="absolute bottom-0 right-0 w-auto h-5/6"
+                class="absolute bottom-0 right-0 w-full"
                 src="c2-assets/vegetable-offer.png"
                 alt=""
               />
@@ -234,12 +260,14 @@
             class="grid grid-cols-2 grid-rows-2 lg:grid-cols-3 lg:grid-rows-3 lg:gap-5 lg:w-3/4 lg:ml-5"
           >
             <!-- Product 1 -->
-            <div class="bg-gray-100 p-6 rounded-lg flex gap-3">
+            <div
+              class="bg-gray-100 p-3 rounded-lg flex justify-center items-center gap-2 lg:gap-3"
+            >
               <div>
                 <img src="c2-assets/Group 16 (1).png" alt="" />
               </div>
               <div>
-                <div class="space-y-1 font-bold">
+                <div class="space-y-1">
                   <div class="rating space-x-1">
                     <input
                       type="radio"
@@ -254,12 +282,14 @@
               </div>
             </div>
             <!-- Product 2 -->
-            <div class="bg-gray-100 p-6 rounded-lg flex gap-3">
+            <div
+              class="bg-gray-100 p-3 rounded-lg flex justify-center items-center gap-3"
+            >
               <div>
                 <img src="c2-assets/Group 16 (2).png" alt="" />
               </div>
               <div>
-                <div class="space-y-1 font-bold">
+                <div class="space-y-1">
                   <div class="rating space-x-1">
                     <input
                       type="radio"
@@ -274,12 +304,14 @@
               </div>
             </div>
             <!-- Product 3 -->
-            <div class="bg-gray-100 p-6 rounded-lg flex gap-3">
+            <div
+              class="bg-gray-100 p-3 rounded-lg flex justify-center items-center gap-2 lg:gap-3"
+            >
               <div>
                 <img src="c2-assets/Group 16 (3).png" alt="" />
               </div>
               <div>
-                <div class="space-y-1 font-bold">
+                <div class="space-y-1">
                   <div class="rating space-x-1">
                     <input
                       type="radio"
@@ -294,12 +326,14 @@
               </div>
             </div>
             <!-- Product 4 -->
-            <div class="bg-gray-100 p-6 rounded-lg flex gap-3">
+            <div
+              class="bg-gray-100 p-3 rounded-lg flex justify-center items-center gap-2 lg:gap-3"
+            >
               <div>
                 <img src="c2-assets/Group 16 (3).png" alt="" />
               </div>
               <div>
-                <div class="space-y-1 font-bold">
+                <div class="space-y-1">
                   <div class="rating space-x-1">
                     <input
                       type="radio"
@@ -314,12 +348,14 @@
               </div>
             </div>
             <!-- Product 5 -->
-            <div class="bg-gray-100 p-6 rounded-lg flex gap-3">
+            <div
+              class="bg-gray-100 p-3 rounded-lg flex justify-center items-center gap-2 lg:gap-3"
+            >
               <div>
                 <img src="c2-assets/Group 16 (2).png" alt="" />
               </div>
               <div>
-                <div class="space-y-1 font-bold">
+                <div class="space-y-1">
                   <div class="rating space-x-1">
                     <input
                       type="radio"
@@ -334,12 +370,14 @@
               </div>
             </div>
             <!-- Product 6 -->
-            <div class="bg-gray-100 p-6 rounded-lg flex gap-3">
+            <div
+              class="bg-gray-100 p-3 rounded-lg flex justify-center items-center gap-2 lg:gap-3"
+            >
               <div>
                 <img src="c2-assets/Group 16 (1).png" alt="" />
               </div>
               <div>
-                <div class="space-y-1 font-bold">
+                <div class="space-y-1">
                   <div class="rating space-x-1">
                     <input
                       type="radio"
@@ -354,12 +392,14 @@
               </div>
             </div>
             <!-- Product 7 -->
-            <div class="bg-gray-100 p-6 rounded-lg flex gap-3">
+            <div
+              class="bg-gray-100 p-3 rounded-lg flex justify-center items-center gap-2 lg:gap-3"
+            >
               <div>
                 <img src="c2-assets/Group 16 (2).png" alt="" />
               </div>
               <div>
-                <div class="space-y-1 font-bold">
+                <div class="space-y-1">
                   <div class="rating space-x-1">
                     <input
                       type="radio"
@@ -374,12 +414,14 @@
               </div>
             </div>
             <!-- Product 8 -->
-            <div class="bg-gray-100 p-6 rounded-lg flex gap-3">
+            <div
+              class="bg-gray-100 p-3 rounded-lg flex justify-center items-center gap-2 lg:gap-3"
+            >
               <div>
                 <img src="c2-assets/Group 16 (1).png" alt="" />
               </div>
               <div>
-                <div class="space-y-1 font-bold">
+                <div class="space-y-1">
                   <div class="rating space-x-1">
                     <input
                       type="radio"
@@ -395,13 +437,13 @@
             </div>
             <!-- Product 9 -->
             <div
-              class="lg:bg-gray-100 lg:p-6 lg:rounded-lg lg:flex gap-3 hidden"
+              class="lg:bg-gray-100 lg:p-3 lg:rounded-lg lg:flex justify-center items-center gap-3 hidden"
             >
               <div>
                 <img src="c2-assets/Group 16 (3).png" alt="" />
               </div>
               <div>
-                <div class="space-y-1 font-bold">
+                <div class="space-y-1">
                   <div class="rating space-x-1">
                     <input
                       type="radio"
@@ -419,13 +461,12 @@
         </div>
       </section>
     </main>
-
-    <!-- main -->
+    <!-- offes card -->
     <main class="md:container mx-auto">
       <section>
         <header>
           <h1
-            class="text-4xl text-color-primary font-bold mx-10 lg:mx-16 mb-10 mt-16 lg:mt-32"
+            class="text-4xl text-color-primary font-bold mx-10 lg:mx-16 mb-10 lg:mb-20 mt-16 lg:mt-32"
           >
             Arrival and offers
           </h1>
@@ -496,29 +537,24 @@
         </div>
       </section>
     </main>
-    <main>
-      <!-- FAQ -->
-      <section
-        class="relative lg:my-24 bg-gradient-to-r from-[#FFFFFF] to-[#EFEBE3]"
-      >
-        <h1 class="text-4xl font-bold text-center lg:mb-24">
-          Frequently Asked <span class="text-bike-primary"> Questions</span>
-        </h1>
-        <!--  Animated Logo -->
-        <div
-          class="absolute -top-10 left-1/2 transform -translate-x-1/2 animate-bounce"
+    <!-- FAQ -->
+    <main class="md:container mx-auto">
+      <section class="lg:my-24 bg-gradient-to-r from-[#FFFFFF] to-[#EFEBE3]">
+        <h1
+          class="text-4xl font-bold text-center text-color-primary pt-8 lg:mb-16"
         >
-          <img src="c2-assets/faq.png" class="w-16 h-16" alt="Logo" />
-        </div>
+          Frequently Asked <span class="text-color-primary"> Questions</span>
+        </h1>
+
         <div class="hero">
           <div class="hero-content flex-col lg:flex-row gap-20">
             <img
               src="c2-assets/faq.png"
-              class="w-fullrounded-lg shadow-2xl hidden sm:block"
+              class="w-full rounded-2xl shadow-2xl hidden sm:block bg-green-200"
             />
             <!-- accordian -->
             <div class="space-y-5">
-              <div class="collapse collapse-arrow border border-blue-100">
+              <div class="collapse collapse-arrow border border-green-500">
                 <input type="radio" name="my-accordion-2" checked="checked" />
                 <div class="collapse-title text-xl font-medium">
                   How do I place an order?
@@ -532,7 +568,7 @@
                   </p>
                 </div>
               </div>
-              <div class="collapse collapse-arrow border border-blue-100">
+              <div class="collapse collapse-arrow border border-green-500">
                 <input type="radio" name="my-accordion-2" />
                 <div class="collapse-title text-xl font-medium">
                   What are the delivery charges?
@@ -545,7 +581,7 @@
                   </p>
                 </div>
               </div>
-              <div class="collapse collapse-arrow border border-blue-100">
+              <div class="collapse collapse-arrow border border-green-500">
                 <input type="radio" name="my-accordion-2" />
                 <div class="collapse-title text-xl font-medium">
                   Can I return or exchange an item?
@@ -559,7 +595,7 @@
                   </p>
                 </div>
               </div>
-              <div class="collapse collapse-arrow border border-blue-100">
+              <div class="collapse collapse-arrow border border-green-500">
                 <input type="radio" name="my-accordion-2" />
                 <div class="collapse-title text-xl font-medium">
                   How can I track my order?
@@ -572,7 +608,7 @@
                   </p>
                 </div>
               </div>
-              <div class="collapse collapse-arrow border border-blue-100">
+              <div class="collapse collapse-arrow border border-green-500">
                 <input type="radio" name="my-accordion-2" />
                 <div class="collapse-title text-xl font-medium">
                   What payment methods do you accept?
@@ -590,37 +626,45 @@
         </div>
       </section>
     </main>
-    <section class="bg-white md:container mx-auto relative z-10 px-4">
+    <!-- flooting section -->
+    <section class="bg-white relative z-10 px-4 lg:px-36 md:container mx-auto">
       <div
-        class="hero bg-gradient-to-r from-[#EFEBE3] to-[#EFEBE3] min-h-[30vh] rounded-xl"
-        style="position: relative; bottom: -20vh"
+        class="hero bg-gradient-to-r from-[#EFEBE3] to-[#EFEBE3] min-h-[30vh] rounded-xl relative -bottom-64 lg:-bottom-56"
       >
-        <div class="hero-content flex-col lg:flex-row">
+        <div class="hero-content flex-col gap-5 lg:gap-20 lg:flex-row">
           <img
             src="c2-assets/vegetable-busket.png"
-            class="max-w-sm rounded-lg shadow-2xl"
+            class="w-full rounded-lg shadow-2xl"
           />
-          <div>
-            <h1 class="text-5xl font-bold">Get Grocery News!</h1>
-            <p class="py-6">
+          <div
+            class="flex flex-col justify-center items-center lg:justify-normal lg:items-start"
+          >
+            <h1
+              class="text-2xl text-green-500 lg:text-5xl lg:text-black font-bold"
+            >
+              Get Grocery News!
+            </h1>
+            <p class="py-4 text-xs lg:text-xl">
               Exclusive training tips, ticks, product deals and more.
             </p>
             <input
-              class="w-5/6 h-14 px-8 py-4 rounded-xl mb-4"
+              class="w-5/6 h-14 px-8 rounded-xl mb-4"
               type="text"
               name=""
               id=""
               placeholder="Enter email...."
             /><br />
-            <button class="btn bg-green-600 text-gray-300">Subscribe</button>
+            <button class="btn bg-green-600 text-gray-300 lg:w-2/6">
+              Subscribe
+            </button>
           </div>
         </div>
       </div>
     </section>
-    <footer class="bg-[#179800] relative z-0">
-      <section class="md:container mx-auto p-30">
+    <footer class="bg-[#179800] relative z-0 w-full">
+      <section class="lg:p-16 pt-3">
         <div
-          class="flex flex-col lg:flex-row lg:justify-between lg:items-center px-5 pt-64 lg:pt-60 lg:pb-24 gap-12 lg:gap-8"
+          class="flex flex-col lg:flex-row lg:justify-between lg:items-center px-5 pt-72 lg:pt-60 lg:pb-24 gap-12 lg:gap-8"
         >
           <div class="space-y-4">
             <img src="c2-assets/logo-footer.png" alt="" />
@@ -637,7 +681,7 @@
               <li><a href="">Contact us</a></li>
             </ul>
           </div>
-          <div class="text-gray-300 text-xl space-y-4">
+          <div class="text-gray-300 text-xl space-y-4 mb-4">
             <p>Follow Us</p>
             <div class="space-x-4">
               <i class="fa-brands fa-facebook"></i>
